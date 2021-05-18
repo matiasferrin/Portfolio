@@ -5,46 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Web Page</title>
+
+<!-- ----------- Custom CSS Style ----------- -->    
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Montserrat:wght@700&family=Roboto&family=Stylish&display=swap" rel="stylesheet">
+    
+   
     <script src="https://kit.fontawesome.com/5837f0a841.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="myjs.js"></script>
+<!--    <script src="myjs.js"></script> -->
+
+    
+    
+
+
 </head>
 
 <body translate="no">
 
-    <div id="content">
-        <div id="nav">
-            <img id="perfil" src=perfil.jpg></img>
-            <h2>MatíasFerrín</h2>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#content" class="nav-link">Bienvenidos</a></li>
-                    <li><a href="#timeline-section" class="nav-link">Mi Carrera</a></li>
-                    <li><a href="#skills-section" class="nav-link">Habilidades</a></li>
-                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                    <li><button><a href="#">Contáctame</a></button></li>
-                </ul>
-            </nav>
+    <div id="container" class="container">
 
-        </div>
+<!-- ----------- Navigation ----------- --> 
+        <nav class="nav">
 
-        <main id="main-content">
-            <section id="welcome-section">
+            <div class="nav-menu flex-row">
+                
+                <div class="nav-brand">
+                    <img id="perfil" src=perfil.jpg></img>
+                    <a href="#" class="text-gray">Matias Ferrin</a>
+                </div>
+
+                <div class="toggle-collapse">
+                    <div class="toggle-icons">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                
+                <div>
+                    <ul class="nav-items">
+                        <li class="nav-link"><a href="#container">About me</a></li>
+                        <li class="nav-link"><a href="#timeline-section">Experience</a></li>
+                        <li class="nav-link"><a href="#skills-section">Skills</a></li>
+                        <li class="nav-link"><a href="#projects-section">Portfolio</a></li>
+                        <button><a href="#footer">Contact me</a></button>
+                    </ul>
+                </div>
+            </div>    
+        </nav>
+        
+<!-- -----x----- Navigation -----x----- -->        
+
+<!-- ----------- Sections ----------- -->        
+
+        <main class="main-content">
+
+<!-- ----------- Welcome Section ----------- -->            
+            <section id="welcome-section" class="welcome-section">
                 <div class="js--fadeInLeft">
-                    <h1 id="welcome-section-title">BIENVENIDOS A MI PAGINA WEB PERSONAL</h1>
+                    <h1 id="welcome-section-title">WELCOME TO MY PERSONAL WEB PAGE</h1>
                     <p> Hola! Soy Matías. Vivo en Barcelona y soy Front-End Developer autodidácta.</p>
                     <p> Me apasiona la tecnología, la programación, la lectura y el aprendizaje continuo.</p>
                     <p> Este sitio web lo he realizado para compartir mis proyectos con miles de personas.</p><br>
                     <p> Contáctame para saber mas de mí.</p>
                 </div>
             </section>
+<!-- -----x----- Welcome Section -----x----- -->            
 
-            <section id="timeline-section">
+<!-- ----------- Timeline Section ----------- -->                        
+            <section id="timeline-section" class="timeline-section">
                 <h1> Mi Experiencia profesional</h1>
                 <div class="timeline">
                 
@@ -106,8 +136,10 @@
             </div>
 
             </section>
+<!-- -----x----- Timeline Section -----x----- -->            
 
-            <section id="skills-section">
+<!-- ----------- Skills Section ----------- -->            
+            <section id="skills-section" class="skills-section">
                 <h2>Stack Tecnologico</h2>
                 <div id="skills-stack" class="js--fadeInLeft">
                         <i class="fab fa-html5"></i>
@@ -116,15 +148,15 @@
                         <i class="fab fa-aws"></i>
                 </div>
                 <h2>Certificaciones</h2>
-                <h2>Certificaciones</h2>
                 <div id="skills-certification" class="js--fadeInLeft">
                     <i class="fab fa-js"></i>
                     <i class="fab fa-aws"></i>
                 </div>
             </section>
+<!-- -----x----- Skills Section -----x----- -->
 
-
-            <section id="projects">
+<!-- ----------- Projects Section ----------- -->            
+            <section id="projects-section" class="projects-section">
                 <h2>ESTOS SON MIS PROYECTOS</h2>
                 <div id="contenedor" class="contenedor_cards">
 
@@ -171,12 +203,41 @@
                         </li>
                     </ul>
             </section>
+<!-- -----x----- Projects Section -----x----- -->            
         </main>
+<!-- -----x----- Sections -----x----- -->         
 
-        <footer id="footer">
-            <a href="#" id="profile-link" target="_blank">PIE DE PAGINA CON LINK</a>
-        </footer>
+<!-- ----------- Footer ----------- -->    
+    <footer id="footer" class="footer">
+        <a href="#" id="profile-link" target="_blank">PIE DE PAGINA CON LINK</a>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
+    </footer>
+
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+        
+        $nav = $('.nav');
+        $toggleCollapse = $('.toggle-collapse');
+        
+        /** click event on toggle menu */
+        $toggleCollapse.click(function () {
+            $nav.toggleClass('collapse');
+        })
+        
+        // AOS Instance
+        AOS.init();
+        
+        });
+        </script>
+
 </body>
 
 </html>
