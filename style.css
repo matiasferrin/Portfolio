@@ -1,122 +1,154 @@
-/* GENERAL */
+/* ----------- GENERAL ----------- */
 
 html {
     scroll-behavior: smooth;    
   }
- 
-* {
-    margin: 0;
-    padding: 0;
-}
 
-body {
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/* -----x----- GENERAL -----x----- */
+
+/* ----------- GRID TEMPLATE ----------- */
+
+.container {
     width: 100%;
 }
 
-/* GRID TEMPLATE */
-
-#content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 'nav' 'main-content' 'footer';
+.main-content {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh auto auto auto;
+    grid-template-areas: 'welcome-section' 
+                         'timeline-section'
+                         'skills-section'
+                         'projects-section';
 }
 
-#nav {
-    grid-area: 'nav';
+/* -----x----- GRID TEMPLATE -----x----- */
+
+/* ----------- NAVIGATION ----------- */
+
+.nav {
     background-color: rgba(255, 255, 255, 0.986);
-    color: black;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 60px;
+    color: #000000;
     box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.7);
     z-index: 100;
     padding: 10px 15px 10px 0;
+    position: fixed;
+    width: 100%;
+    height: 0rem;
+    min-height: 10vh;
+    transition: height 1s ease-in-out;
+    overflow: hidden;
 }
 
-#main-content {
-    grid-area: 'main-content';
-    background: linear-gradient(66deg, #106ba8 0%, #27c950 100%);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto auto auto;
-    grid-template-areas: 'welcome-section' 'experience' 'skills-section' 'projects';
+.nav .nav-menu{    
+    justify-content:space-between;
+}
+
+.nav .nav-menu .nav-brand {
+    height: 10vh;
+    display: flex;
     align-items: center;
 }
 
-#footer {
-    grid-area: 'footer';
-    height: 60vh;
-    background-color: #4D4545;
-    padding: 15px 5px 10px 5px;
-    text-align: center;
-}
-
-
-/* SECTIONS */
-
-#welcome-section {
-    grid-area: 'welcome-section';
-    padding: 10px 5px 10px 5px;
-    text-align: center;
-    color: rgb(248, 245, 245);
-}
-
-#timeline-section {
-    grid-area: 'experience';
-    background-color: #eee;
-    padding: 100px 10px 0px 10px;
-    text-align: center;
-}
-
-#skills-section {
-    grid-area: 'skills-section';
-    background-color: white;
-    padding: 100px 0px 10px 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: '1'
-                         '2' ;
-}
-
-#projects {
-    grid-area: 'projects';
-    background: linear-gradient(to bottom, #bcc0f7, #a7acee);
-    padding-top: 100px;
+.nav .toggle-collapse{
+    position: absolute;
+    top: 5vh;
+    left: 30px;
     width: 100%;
+    cursor: pointer;
+    display: none;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    align-items: center;
+}
 
-/* SPECIFIC TAGS FOR NAVBAR */
+.collapse{
+    height: 60vh;
+}
 
-#nav h2 {
+.nav .nav-items{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.nav h2 {
     margin-right: auto;
     padding-left: 3px;
 }
 
-#navbar ul li {
+.nav-items .nav-link {
     display: inline-block;
     padding: 12px 22px 12px 3px;
 }
 
-#navbar ul li a {
-    text-decoration: none;
+.nav-items .nav-link a {
     transition: all 0.3s ease 0s;
 }
 
-#navbar ul li a:hover {
+.nav-items .nav-link a:hover {
     color: #106ba8;
 }
 
-#nav img {
-    max-height: 65px;
+.nav img {
+    max-height: 10vh;
     border-radius: 50%;
     border: 2px solid black;
     margin: 0px 5px 0px 10px;
 }
+/* -----x----- NAVIGATION -----x----- */
+
+/* ----------- SECTIONS ----------- */
+
+.welcome-section {
+    grid-area: 'welcome-section';
+    background: linear-gradient(66deg, #106ba8 0%, #27c950 100%);
+    text-align: center;
+    color: rgb(248, 245, 245);
+    padding-top: 100px;
+}
+
+.timeline-section {
+    grid-area: 'timeline-section';
+    background-color: #eee;
+    text-align: center;
+}
+
+.skills-section {
+    grid-area: 'skills-section';
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 
+                        1fr;
+    grid-template-areas: '1'
+                         '2' ;
+}
+
+.projects-section {
+    grid-area: 'projects-section';
+    background: linear-gradient(to bottom, #bcc0f7, #a7acee);
+}
+/* -----x----- SECTIONS -----x----- */
+
+/* ----------- FOOTER ----------- */
+.footer {
+    grid-area: 'footer';
+    height: 60vh;
+    background-color: #4D4545;
+    text-align: center;
+}
+/* -----x----- FOOTER -----x----- */
+
 
 
 /* SPECIFIC TAGS FOR TEXT */
@@ -135,7 +167,6 @@ h2 {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    line-height: 40px;
 }
 
 a {
@@ -457,3 +488,16 @@ img {
     line-height: 1.5;
     margin-bottom: 1.25rem;
 }
+
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+        width: 80% !important;
+    }
+}
+/*        x      Viewport less then or equal to 750px       x     */
