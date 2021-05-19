@@ -341,10 +341,17 @@ button:hover {
 
 /* SKILLS*/
 
-#skills-stack {
+#skills-stack1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    margin: 0;
+}
+
+#skills-stack2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
     margin: 0;
 }
 
@@ -352,7 +359,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .fab {
