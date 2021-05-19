@@ -117,7 +117,7 @@ html, body{
     grid-area: 'timeline-section';
     background-color: #eee;
     text-align: center;
-    padding: 10vh 2vh;
+    padding: 10vw 2vw;
 }
 
 .skills-section {
@@ -129,7 +129,7 @@ html, body{
                         1fr;
     grid-template-areas: '1'
                          '2' ;
-    padding: 10vh 2vh;
+    padding: 10vw 2vw;
 }
 
 .projects-section {
