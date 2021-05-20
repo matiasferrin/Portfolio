@@ -26,19 +26,19 @@ html, body{
     grid-area: 'timeline-section';
     background-color: #eee;
     text-align: center;
-    padding: 10vw 2vw;
+    padding: 15vh 2vw;
 }
 
 .skills-section {
     grid-area: 'skills-section';
     background-color: white;
-    padding: 10vw 2vw;
+    padding: 15vh 2vw;
 }
 
 .projects-section {
     grid-area: 'projects-section';
     background: linear-gradient(to bottom, #bcc0f7, #a7acee);
-    padding: 10vw 2vw;
+    padding: 15vh 2vw;
 }
 /* -----x----- SECTIONS -----x----- */
 
