@@ -8,14 +8,15 @@
 
 <!-- ----------- Custom CSS Style ----------- -->    
     <link rel="stylesheet" href="style.css" />
+
+<!-- ----------- Google Fonts & Font Awesome & JQuery ----------- --> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Montserrat:wght@700&family=Roboto&family=Stylish&display=swap" rel="stylesheet">
-    
     <script src="https://kit.fontawesome.com/5837f0a841.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
-    <script src="myjs.js"></script>
-    
+<!-- ----------- Custom Javascript ----------- -->    
+    <script src="myjs.js"></script> 
 </head>
 
 <body translate="no">
@@ -29,7 +30,7 @@
                 
                 <div class="nav-brand">
                     <img id="perfil" src=perfil.jpg></img>
-                    <a href="#" class="text-gray">Matias Ferrin</a>
+                    <p class="text-gray">Matias Ferrin</p>
                 </div>
 
                 <div class="toggle-collapse">
@@ -40,11 +41,11 @@
                 
                 <div>
                     <ul class="nav-items">
-                        <li class="nav-link"><a href="#container">About me</a></li>
-                        <li class="nav-link"><a href="#timeline-section">Experience</a></li>
-                        <li class="nav-link"><a href="#skills-section">Skills</a></li>
+                        <li class="nav-link"><a href="#container">Info</a></li>
+                        <li class="nav-link"><a href="#timeline-section">Experiencia</a></li>
+                        <li class="nav-link"><a href="#skills-section">Habilidades</a></li>
                         <li class="nav-link"><a href="#projects-section">Portfolio</a></li>
-                        <button><a href="#footer">Contact me</a></button>
+                        <button><a href="#footer">Contactarme</a></button>
                     </ul>
                 </div>
             </div>    
@@ -59,11 +60,10 @@
 <!-- ----------- Welcome Section ----------- -->            
             <section id="welcome-section" class="welcome-section">
                 <div class="js--fadeInLeft">
-                    <h1 id="welcome-section-title">WELCOME TO MY PERSONAL WEB PAGE</h1>
+                    <h1 id="welcome-section-title">BIENVENIDOS A MI PAGINA WEB PERSONAL</h1>
                     <p> Hola! Soy Matías. Vivo en Barcelona y soy Front-End Developer autodidácta.</p>
                     <p> Me apasiona la tecnología, la programación, la lectura y el aprendizaje continuo.</p>
-                    <p> Este sitio web lo he realizado para compartir mis proyectos con miles de personas.</p><br>
-                    <p> Contáctame para saber mas de mí.</p>
+                    <p> Este sitio web lo he realizado para compartir mis proyectos con otras personas.</p>
                 </div>
             </section>
 <!-- -----x----- Welcome Section -----x----- -->            
@@ -151,17 +151,34 @@
                 </div>
                 <h2>Certificaciones</h2>
                 <div id="skills-certification" class="js--fadeInLeft">
-                    <i class="fab fa-free-code-camp"></i>
-                    <i class="fab fa-free-code-camp"></i>
-                    <i class="fab fa-microsoft"></i>
-                    <i class="fab fa-microsoft"></i>
+                    <div class="certification-card">
+                        <p>FreeCodeCamp</p>
+                        <i class="fab fa-free-code-camp"></i>
+                        <p>Web Design</p>
+                    </div>
+                    <div class="certification-card">
+                        <p>FreeCodeCamp</p>
+                        <i class="fab fa-free-code-camp"></i>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="certification-card">
+                        <p>Microsoft</p>
+                        <i class="fab fa-microsoft"></i>
+                        <p>Excel Expert</p>
+                    </div>
+                    <div class="certification-card">
+                        <p>Microsoft</p>
+                        <i class="fab fa-microsoft"></i>
+                        <p>Access Expert</p>
+                    </div>
+                    
                 </div>
             </section>
 <!-- -----x----- Skills Section -----x----- -->
 
 <!-- ----------- Projects Section ----------- -->            
             <section id="projects-section" class="projects-section">
-                <h2>ESTOS SON MIS PROYECTOS</h2>
+                <h2>MIS PROYECTOS</h2>
                 <div id="contenedor" class="contenedor_cards">
 
                     <ul class="cards">
@@ -169,8 +186,8 @@
                             <div class="card" class="project-tile">
                                 <div class="card__image card__image--1"></div>
                                 <div class="card__content">
-                                    <div class="card__title">First Responsive Landing Page</div>
-                                    <p class="card__text">Mi primer Pagina Web con diseño responsivo. Realizada desde 0, utilizando HTML5, CSS3 y Javascript para objetos animados. Repositorio en GitHub y Live Preview en Netlify.</p>
+                                    <div class="card__title">Primera Landing Page Responsiva</div>
+                                    <p class="card__text">Mi primer Pagina Web con diseño responsivo. Realizada desde 0, sin librerias, utilizando HTML5, CSS3 y Javascript para objetos animados. Repositorio en GitHub y Live Preview en Netlify.</p>
                                     <button class="btn btn--block card__btn"><a id="link-project" href="https://landingpage-mferrin.netlify.app/" target="_blank">Live Preview</a></button>
                                 </div>
                             </div>
@@ -180,7 +197,7 @@
                                 <div class="card__image card__image--2"></div>
                                 <div class="card__content">
                                     <div class="card__title">React Random Quote Machine</div>
-                                    <p class="card__text">Single Page Application con diseño responsivo. Realizada desde 0, utilizando React y CSS3. Repositorio en GitHub y Live Preview en Netlify..</p>
+                                    <p class="card__text">Single Page Application con diseño responsivo. Realizada desde 0, utilizando React, HTML5 y CSS3. Repositorio en GitHub y Live Preview en Netlify.</p>
                                     <button class="btn btn--block card__btn"><a id="link-project" href="https://react-mferrin.netlify.app/" target="_blank">Live Preview</a></button>
                                 </div>
                             </div>
@@ -189,8 +206,8 @@
                             <div class="card" class="project-tile">
                                 <div class="card__image card__image--3"></div>
                                 <div class="card__content">
-                                    <div class="card__title">Proyect N°3</div>
-                                    <p class="card__text">Esta es la descripcion de mi tercer proyecto. HTML, CSS y JS. Programacion integral, diseño de layout, deploy on AWS y mantennimiento. Se utilizaron todas las tecnologías aprendidas en FreeCodeCamp.</p>
+                                    <div class="card__title">Pagina Web Bootstrap</div>
+                                    <p class="card__text">Desarrollo de sitio web responsivo, realizado desde 0, utilizando HTML5 y la libreria Bootstrap.</p>
                                     <button class="btn btn--block card__btn"><a id="link-project" href="#" target="_blank">Live Preview</a></button>
                                 </div>
                             </div>
@@ -199,8 +216,8 @@
                             <div class="card" class="project-tile">
                                 <div class="card__image card__image--4"></div>
                                 <div class="card__content">
-                                    <div class="card__title">Proyect N°3</div>
-                                    <p class="card__text">Esta es la descripcion de mi tercer proyecto. HTML, CSS y JS. Programacion integral, diseño de layout, deploy on AWS y mantennimiento. Se utilizaron todas las tecnologías aprendidas en FreeCodeCamp.</p>
+                                    <div class="card__title">TO-DO LIST JavaScript & SASS</div>
+                                    <p class="card__text">TO-DO list realizado con Vainilla Javascript, sin frameworks ni librerias. Implementado utilizando las ventajas de SAASS, incluida la utilización de variables y mixins.</p>
                                     <button class="btn btn--block card__btn"><a id="link-project" href="#" target="_blank">Live Preview</a></button>
                                 </div>
                             </div>
@@ -214,7 +231,7 @@
 <!-- ----------- Footer ----------- -->    
     <footer id="footer" class="footer">
         
-        <a href="#" id="profile-link" target="_blank">PIE DE PAGINA CON LINK</a>
+        <a href="#" id="profile-link" target="_blank">Contacta conmigo</a>
         <div class="social text-gray">
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-github-square"></i></a>
@@ -223,24 +240,6 @@
     </footer>
 
     </div>
-
-    <script>
-        $(document).ready(function () {
-        
-        $nav = $('.nav');
-        $toggleCollapse = $('.toggle-collapse');
-        
-        /** click event on toggle menu */
-        $toggleCollapse.click(function () {
-            $nav.toggleClass('collapse');
-        })
-        
-        // AOS Instance
-        AOS.init();
-        
-        });
-        </script>
-
 </body>
 
 </html>
