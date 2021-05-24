@@ -150,19 +150,19 @@ button:hover {
 /* ----------- TEXT & FONTS ----------- */
 
 h1 {
-    font-size: calc((.3em + 3vmin) + (.3em + 3vmax));
+    font-size: calc((.3em + 2.5vmin) + (.3em + 2.5vmax));
     font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: calc((.3em + 2vmin) + (.3em + 2vmax));
+    font-size: calc((.3em + 1.5vmin) + (.3em + 1.5vmax));
     text-align: center;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: calc((.3em + 1vmin) + (.3em + 1vmax));
+    font-size: calc((.3em + 0.5vmin) + (.3em + 0.5vmax));
 }
 
 a {
